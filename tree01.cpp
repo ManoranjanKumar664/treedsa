@@ -25,6 +25,25 @@ int main()
 
 node* create()
 {
+    int x;
+    node *temp=new node;
+    cout<<"enter element(-1 for no element)";
+    cin>>x;
+    if(x==-1)
+    {
+         return 0;
+    }
+    else
+    {
+        temp->data=x;
+        temp->left=create();
+        temp->right=create();
+        return temp;
+    }
+}
+
+/* node* create()
+{
     int x=0;
     cout<<"enter -1 for no new node"<<endl;
     cin>>x;
@@ -44,7 +63,7 @@ node* create()
         temp->right=create();
         return temp;
     }
-}
+} */
 
 void show(node *x)
 {
