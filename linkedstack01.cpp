@@ -30,8 +30,10 @@ void push(int x)
 {
     node *temp=new node;
     temp->data=x;
-    temp->next=0;
-    if(root==0)
+    temp->next=root;
+    root=temp;
+    cout<<"element inserted"<<endl;
+  /*  if(root==0)
     {
         root=temp;
         cout<<"element inserted at root."<<endl;
@@ -41,7 +43,7 @@ void push(int x)
         temp->next=root;
         root=temp;
         cout<<"element inserted"<<endl;
-    }
+    }*/
 }
 
 void pop()
